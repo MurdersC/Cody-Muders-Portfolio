@@ -1,0 +1,1435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cody Justin Müders | Political Science & International Law</title>
+
+  <meta name="description" content="Academic portfolio of Cody Justin Müders, Political Science, Law and Policy student at California State Polytechnic University, Humboldt.">
+  <meta name="author" content="Cody Justin Müders">
+  <meta name="theme-color" content="#101a29">
+
+  <meta property="og:title" content="Cody Justin Müders | Academic Portfolio">
+  <meta property="og:description" content="Political Science, Law, Policy and International Law.">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* =========================================
+       1. DESIGN SYSTEM
+    ========================================= */
+
+    :root {
+      --bg: #101a29;
+      --surface: #182537;
+      --surface-light: #202f42;
+      --text: #f4f0e8;
+      --muted: #b1b9c4;
+      --gold: #d6b56d;
+      --gold-light: #f0dba8;
+      --border: rgba(214,181,109,0.22);
+      --nav-bg: rgba(16,26,41,0.94);
+      --shadow: 0 15px 45px rgba(0,0,0,0.22);
+      --max-width: 1160px;
+      --radius: 16px;
+    }
+
+    [data-theme="light"] {
+      --bg: #f4f1e9;
+      --surface: #ffffff;
+      --surface-light: #eee9dd;
+      --text: #182537;
+      --muted: #626d7b;
+      --gold: #96702e;
+      --gold-light: #b38c43;
+      --border: rgba(150,112,46,0.25);
+      --nav-bg: rgba(244,241,233,0.95);
+      --shadow: 0 15px 40px rgba(25,35,50,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.75;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold-light);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max-width), 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 95px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.19em;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 12px 0 18px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .section-heading {
+      max-width: 740px;
+      margin-bottom: 45px;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 20px 0;
+    }
+
+    /* =========================================
+       2. NAVIGATION
+    ========================================= */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      color: var(--gold);
+      font-size: 1.25rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-button,
+    .menu-toggle {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--gold);
+      padding: 9px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* =========================================
+       3. BUTTONS
+    ========================================= */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 1px solid var(--gold);
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: #101a29;
+    }
+
+    .button-primary:hover {
+      background: var(--gold-light);
+      color: #101a29;
+      transform: translateY(-3px);
+    }
+
+    .button-secondary {
+      color: var(--gold);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      background: var(--gold);
+      color: #101a29;
+      transform: translateY(-3px);
+    }
+
+    /* =========================================
+       4. HERO SECTION
+    ========================================= */
+
+    .hero {
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(214,181,109,0.13),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          var(--bg),
+          var(--surface)
+        );
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      content: "§";
+      position: absolute;
+      right: 7%;
+      top: 5%;
+      font-family: Georgia, serif;
+      font-size: 30rem;
+      color: var(--gold);
+      opacity: 0.035;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      gap: 65px;
+      align-items: center;
+      padding: 90px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      margin: 20px 0;
+      letter-spacing: -0.045em;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-description {
+      font-size: 1.08rem;
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 28px;
+    }
+
+    .hero-note {
+      font-size: 0.88rem;
+      margin-top: 25px;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: 33px;
+      border-radius: 5px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      font-size: 1.7rem;
+      margin-top: 15px;
+    }
+
+    .hero-card-label {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .research-list {
+      list-style: none;
+      margin-top: 22px;
+    }
+
+    .research-list li {
+      border-top: 1px solid var(--border);
+      padding: 13px 0;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .research-list li::before {
+      content: "◆";
+      color: var(--gold);
+      font-size: 0.65rem;
+      margin-right: 12px;
+    }
+
+    /* =========================================
+       5. ABOUT
+    ========================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .principle {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 30px;
+      border-radius: 5px;
+    }
+
+    .principle blockquote {
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin: 18px 0;
+      color: var(--text);
+    }
+
+    /* =========================================
+       6. EDUCATION
+    ========================================= */
+
+    .alternate-section {
+      background: var(--surface);
+      border-block: 1px solid var(--border);
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .education-card {
+      padding: 32px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: 0.25s;
+    }
+
+    .education-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .education-card h3 {
+      font-size: 1.45rem;
+      margin: 16px 0 10px;
+    }
+
+    .education-card .date {
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .education-card p {
+      margin-top: 12px;
+    }
+
+    .degree {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* =========================================
+       7. ACADEMIC RECOGNITION
+    ========================================= */
+
+    .honors-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 35px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      max-width: 850px;
+    }
+
+    .honors-icon {
+      font-size: 3rem;
+      color: var(--gold);
+      min-width: 65px;
+      text-align: center;
+    }
+
+    .honors-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 7px;
+    }
+
+    /* =========================================
+       8. GRADUATE SCHOOL
+    ========================================= */
+
+    .graduate-intro {
+      max-width: 780px;
+      margin-bottom: 35px;
+    }
+
+    .graduate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .graduate-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: 28px;
+      border-radius: 5px;
+      min-height: 220px;
+      transition: 0.25s;
+    }
+
+    .graduate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .graduate-card h3 {
+      font-size: 1.35rem;
+      margin: 15px 0 10px;
+    }
+
+    .status {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      padding: 5px 9px;
+      border-radius: 3px;
+    }
+
+    .graduate-interest {
+      margin-top: 30px;
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 5px;
+    }
+
+    .graduate-interest h3 {
+      color: var(--gold);
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    /* =========================================
+       9. CAMPUS INVOLVEMENT
+    ========================================= */
+
+    .involvement-card {
+      max-width: 800px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 30px;
+      border-radius: 5px;
+    }
+
+    .involvement-card h3 {
+      font-size: 1.45rem;
+      margin: 12px 0;
+    }
+
+    /* =========================================
+       10. CONTACT
+    ========================================= */
+
+    .contact-panel {
+      background:
+        linear-gradient(
+          135deg,
+          var(--surface),
+          var(--surface-light)
+        );
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      padding: clamp(35px, 6vw, 70px);
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    .contact-panel h2 {
+      margin-top: 15px;
+    }
+
+    .contact-panel p {
+      max-width: 650px;
+      margin: 15px auto 30px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .contact-links a {
+      font-weight: 700;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px;
+    }
+
+    /* =========================================
+       11. FOOTER
+    ========================================= */
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      font-size: 0.83rem;
+    }
+
+    .back-to-top {
+      font-weight: 700;
+    }
+
+    /* =========================================
+       12. ANIMATIONS
+    ========================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================
+       13. RESPONSIVE DESIGN
+    ========================================= */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .graduate-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 65px 0;
+      }
+
+      .nav-inner {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 11px 0;
+        font-size: 0.95rem;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 3.1rem;
+      }
+
+      .education-grid,
+      .graduate-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      .honors-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================
+       NAVIGATION
+  ====================================== -->
+
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+
+      <a class="brand" href="#home">Cody Justin Müders.</a>
+
+      <div class="nav-actions">
+
+        <button
+          class="icon-button"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to light theme">
+          ☀
+        </button>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links">
+          Menu ☰
+        </button>
+
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#honors">Honors</a>
+        <a href="#graduate">Graduate School</a>
+        <a href="#involvement">Involvement</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="reveal">
+
+          <div class="eyebrow">
+            Political Science · Law · Public Policy
+          </div>
+
+          <h1>
+            Cody Justin
+            <span>Müders.</span>
+          </h1>
+
+          <div class="gold-line"></div>
+
+          <p class="hero-description">
+            Political Science, Law and Policy student at
+            California State Polytechnic University, Humboldt,
+            with academic interests in international law,
+            legal institutions, and global governance.
+            Preparing for the next chapter of academic study
+            and professional development.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#education" class="button button-primary">
+              Explore My Education →
+            </a>
+
+            <a href="#contact" class="button button-secondary">
+              Get in Touch ↗
+            </a>
+
+          </div>
+
+          <p class="hero-note">
+            California State Polytechnic University, Humboldt
+            · Expected Graduation 2027
+          </p>
+
+        </div>
+
+
+        <aside class="hero-card reveal">
+
+          <div class="hero-card-label">
+            Academic Profile
+          </div>
+
+          <h2>
+            Law, policy, and the pursuit of justice.
+          </h2>
+
+          <ul class="research-list">
+
+            <li>Political Science</li>
+            <li>Law and Public Policy</li>
+            <li>International Law</li>
+            <li>Legal Institutions</li>
+            <li>Global Governance</li>
+
+          </ul>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ABOUT
+    ====================================== -->
+
+    <section class="section" id="about">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">Introduction</div>
+
+          <h2>
+            About Me
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p class="section-intro">
+            An academic journey centered on political institutions,
+            legal systems, and the principles that shape society.
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-copy reveal">
+
+            <p>
+              I am Cody Justin Müders, an undergraduate student
+              pursuing a Bachelor of Science in Political Science,
+              Law and Policy at California State Polytechnic
+              University, Humboldt, with an anticipated graduation
+              in 2027.
+            </p>
+
+            <p>
+              My academic interests focus on the relationship
+              between law, political institutions, public policy,
+              and the broader international community.
+              I am particularly interested in understanding
+              how legal frameworks influence governance,
+              international relations, and the development
+              of public institutions.
+            </p>
+
+            <p>
+              Following my undergraduate studies, I look forward
+              to pursuing graduate education, with a particular
+              interest in International Law.
+            </p>
+
+          </div>
+
+
+          <div class="principle reveal">
+
+            <div class="eyebrow">
+              Academic Philosophy
+            </div>
+
+            <blockquote>
+              "Understanding the law is understanding
+              the foundations upon which societies operate."
+            </blockquote>
+
+            <p>
+              My approach emphasizes critical thinking,
+              analytical reasoning, intellectual curiosity,
+              and a commitment to understanding complex
+              political and legal systems.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         EDUCATION
+    ====================================== -->
+
+    <section class="section alternate-section" id="education">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">Academic Background</div>
+
+          <h2>
+            Education
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p>
+            Building an academic foundation in political science,
+            law, policy, and criminal justice.
+          </p>
+
+        </div>
+
+
+        <div class="education-grid">
+
+          <article class="education-card reveal">
+
+            <div class="date">
+              Current Institution · Expected 2027
+            </div>
+
+            <h3>
+              California State Polytechnic University, Humboldt
+            </h3>
+
+            <p class="degree">
+              Bachelor of Science in Political Science,
+              Law and Policy
+            </p>
+
+            <p>
+              Undergraduate studies focused on political
+              institutions, legal systems, public policy,
+              and the foundations of governance.
+            </p>
+
+          </article>
+
+
+          <article class="education-card reveal">
+
+            <div class="date">
+              Previous Education
+            </div>
+
+            <h3>
+              Diablo Valley College
+            </h3>
+
+            <p class="degree">
+              Associate of Arts in Criminal Justice
+            </p>
+
+            <p>
+              Academic foundation in criminal justice,
+              legal systems, and the institutions
+              responsible for administering justice.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ACADEMIC HONORS
+    ====================================== -->
+
+    <section class="section" id="honors">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">Academic Achievement</div>
+
+          <h2>
+            Honors & Recognition
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p>
+            Recognition of academic commitment and achievement
+            throughout my undergraduate education.
+          </p>
+
+        </div>
+
+
+        <article class="honors-card reveal">
+
+          <div class="honors-icon" aria-hidden="true">
+            ♛
+          </div>
+
+          <div>
+
+            <div class="eyebrow">
+              Spring 2025
+            </div>
+
+            <h3>
+              Dean's Honor List
+            </h3>
+
+            <p>
+              Recognized for academic achievement
+              at California State Polytechnic University,
+              Humboldt.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         GRADUATE SCHOOL
+    ====================================== -->
+
+    <section
+      class="section alternate-section"
+      id="graduate">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">Future Academic Pursuits</div>
+
+          <h2>
+            Looking Ahead: Graduate School
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p class="graduate-intro">
+            Continuing my academic journey through graduate
+            education is an important next step. I am looking
+            forward to further developing my understanding
+            of international legal systems, international
+            institutions, and global governance.
+          </p>
+
+        </div>
+
+
+        <div class="graduate-grid">
+
+          <article class="graduate-card reveal">
+
+            <span class="status">
+              Provisional Acceptance
+            </span>
+
+            <h3>
+              University of Glasgow
+            </h3>
+
+            <p>
+              Glasgow, Scotland
+            </p>
+
+          </article>
+
+
+          <article class="graduate-card reveal">
+
+            <span class="status">
+              Provisional Acceptance
+            </span>
+
+            <h3>
+              Robert Gordon University
+            </h3>
+
+            <p>
+              Aberdeen, Scotland
+            </p>
+
+          </article>
+
+
+          <article class="graduate-card reveal">
+
+            <span class="status">
+              Provisional Acceptance
+            </span>
+
+            <h3>
+              Queen's University Belfast
+            </h3>
+
+            <p>
+              Belfast, Northern Ireland
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="graduate-interest reveal">
+
+          <div class="eyebrow">
+            Graduate School Interests
+          </div>
+
+          <h3>
+            International Law
+          </h3>
+
+          <p>
+            My intended graduate studies will focus on
+            International Law, including the legal frameworks,
+            institutions, and principles that govern relations
+            between states and shape the international community.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CAMPUS INVOLVEMENT
+    ====================================== -->
+
+    <section class="section" id="involvement">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">Campus & Community</div>
+
+          <h2>
+            Student Involvement
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p>
+            Interdisciplinary engagement and participation
+            in the university community.
+          </p>
+
+        </div>
+
+
+        <article class="involvement-card reveal">
+
+          <div class="eyebrow">
+            Student Organization
+          </div>
+
+          <h3>
+            Data Science Club
+          </h3>
+
+          <p>
+            Member of the Data Science Club at California State
+            Polytechnic University, Humboldt.
+          </p>
+
+          <p style="margin-top: 15px;">
+            Participating in an interdisciplinary academic
+            community that encourages analytical thinking,
+            collaboration, and engagement with data-driven
+            approaches to understanding real-world issues.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CONTACT
+    ====================================== -->
+
+    <section class="section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-panel reveal">
+
+          <div class="eyebrow">
+            Contact & Professional Connections
+          </div>
+
+          <h2>
+            Let's Connect.
+          </h2>
+
+          <div class="gold-line"
+               style="margin: 20px auto;">
+          </div>
+
+          <p>
+            I welcome professional connections and conversations
+            concerning political science, legal studies,
+            international law, graduate education,
+            and academic opportunities.
+          </p>
+
+
+          <div class="contact-links">
+
+            <a href="mailto:muders3@yahoo.com">
+              Email Me ↗
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/cody-m%C3%BCders-1b9201449/"
+              target="_blank"
+              rel="noopener noreferrer">
+              LinkedIn Profile ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="year"></span>
+        Cody Justin Müders.
+        Academic Portfolio.
+      </p>
+
+      <a class="back-to-top" href="#home">
+        Back to Top ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+
+  <script>
+
+    // Automatically update copyright year.
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Mobile navigation.
+
+    const menuToggle =
+      document.getElementById("menu-toggle");
+
+    const navLinks =
+      document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen =
+        navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.textContent =
+        isOpen ? "Close ×" : "Menu ☰";
+
+    });
+
+
+    // Close mobile navigation after selection.
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.textContent = "Menu ☰";
+
+      });
+
+    });
+
+
+    // Light and dark theme toggle.
+
+    const themeToggle =
+      document.getElementById("theme-toggle");
+
+    themeToggle.addEventListener("click", () => {
+
+      const isLight =
+        document.documentElement.getAttribute("data-theme")
+        === "light";
+
+      const newTheme =
+        isLight ? "dark" : "light";
+
+      document.documentElement.setAttribute(
+        "data-theme",
+        newTheme
+      );
+
+      themeToggle.textContent =
+        newTheme === "light" ? "☾" : "☀";
+
+      themeToggle.setAttribute(
+        "aria-label",
+        newTheme === "light"
+          ? "Switch to dark theme"
+          : "Switch to light theme"
+      );
+
+    });
+
+
+    // Scroll reveal animations.
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>
