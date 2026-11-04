@@ -5,20 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cody Justin Müders | Political Science & International Law</title>
+  <title>Cody Justin Müders | Academic Portfolio</title>
 
   <meta name="description" content="Academic portfolio of Cody Justin Müders, Political Science, Law and Policy student at California State Polytechnic University, Humboldt.">
   <meta name="author" content="Cody Justin Müders">
   <meta name="theme-color" content="#101a29">
 
-  <meta property="og:title" content="Cody Justin Müders | Academic Portfolio">
-  <meta property="og:description" content="Political Science, Law, Policy and International Law.">
-  <meta property="og:type" content="website">
-
   <style>
-    /* =========================================
+    /* ========================================
        1. DESIGN SYSTEM
-    ========================================= */
+    ======================================== */
 
     :root {
       --bg: #101a29;
@@ -28,11 +24,11 @@
       --muted: #b1b9c4;
       --gold: #d6b56d;
       --gold-light: #f0dba8;
-      --border: rgba(214,181,109,0.22);
-      --nav-bg: rgba(16,26,41,0.94);
-      --shadow: 0 15px 45px rgba(0,0,0,0.22);
+      --border: rgba(214, 181, 109, 0.22);
+      --nav-bg: rgba(16, 26, 41, 0.96);
+      --shadow: 0 15px 45px rgba(0, 0, 0, 0.22);
       --max-width: 1160px;
-      --radius: 16px;
+      --radius: 8px;
     }
 
     [data-theme="light"] {
@@ -43,9 +39,9 @@
       --muted: #626d7b;
       --gold: #96702e;
       --gold-light: #b38c43;
-      --border: rgba(150,112,46,0.25);
-      --nav-bg: rgba(244,241,233,0.95);
-      --shadow: 0 15px 40px rgba(25,35,50,0.08);
+      --border: rgba(150, 112, 46, 0.25);
+      --nav-bg: rgba(244, 241, 233, 0.97);
+      --shadow: 0 15px 40px rgba(25, 35, 50, 0.08);
     }
 
     * {
@@ -70,7 +66,7 @@
     a {
       color: var(--gold);
       text-decoration: none;
-      transition: 0.2s;
+      transition: color 0.2s, background 0.2s;
     }
 
     a:hover {
@@ -83,9 +79,13 @@
       outline-offset: 4px;
     }
 
+    button {
+      font: inherit;
+    }
+
     .container {
       width: min(var(--max-width), 90%);
-      margin: auto;
+      margin: 0 auto;
     }
 
     .section {
@@ -127,9 +127,9 @@
       margin: 20px 0;
     }
 
-    /* =========================================
+    /* ========================================
        2. NAVIGATION
-    ========================================= */
+    ======================================== */
 
     .navbar {
       position: sticky;
@@ -159,7 +159,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 27px;
+      gap: 25px;
     }
 
     .nav-links a {
@@ -186,16 +186,15 @@
       padding: 9px 13px;
       border-radius: 8px;
       cursor: pointer;
-      font: inherit;
     }
 
     .menu-toggle {
       display: none;
     }
 
-    /* =========================================
+    /* ========================================
        3. BUTTONS
-    ========================================= */
+    ======================================== */
 
     .button {
       display: inline-flex;
@@ -232,9 +231,9 @@
       transform: translateY(-3px);
     }
 
-    /* =========================================
+    /* ========================================
        4. HERO SECTION
-    ========================================= */
+    ======================================== */
 
     .hero {
       min-height: 660px;
@@ -245,7 +244,7 @@
       background:
         radial-gradient(
           circle at 85% 20%,
-          rgba(214,181,109,0.13),
+          rgba(214, 181, 109, 0.13),
           transparent 35%
         ),
         linear-gradient(
@@ -348,9 +347,9 @@
       margin-right: 12px;
     }
 
-    /* =========================================
+    /* ========================================
        5. ABOUT
-    ========================================= */
+    ======================================== */
 
     .about-grid {
       display: grid;
@@ -380,9 +379,9 @@
       color: var(--text);
     }
 
-    /* =========================================
+    /* ========================================
        6. EDUCATION
-    ========================================= */
+    ======================================== */
 
     .alternate-section {
       background: var(--surface);
@@ -431,9 +430,9 @@
       font-weight: 700;
     }
 
-    /* =========================================
+    /* ========================================
        7. ACADEMIC RECOGNITION
-    ========================================= */
+    ======================================== */
 
     .honors-card {
       display: flex;
@@ -458,9 +457,9 @@
       margin-bottom: 7px;
     }
 
-    /* =========================================
+    /* ========================================
        8. GRADUATE SCHOOL
-    ========================================= */
+    ======================================== */
 
     .graduate-intro {
       max-width: 780px;
@@ -519,9 +518,9 @@
       margin-bottom: 10px;
     }
 
-    /* =========================================
+    /* ========================================
        9. CAMPUS INVOLVEMENT
-    ========================================= */
+    ======================================== */
 
     .involvement-card {
       max-width: 800px;
@@ -537,53 +536,61 @@
       margin: 12px 0;
     }
 
-    /* =========================================
+    /* ========================================
        10. CONTACT
-    ========================================= */
+    ======================================== */
 
     .contact-panel {
-      background:
-        linear-gradient(
-          135deg,
-          var(--surface),
-          var(--surface-light)
-        );
+      background: linear-gradient(
+        135deg,
+        var(--surface),
+        var(--surface-light)
+      );
       border: 1px solid var(--border);
       border-top: 3px solid var(--gold);
-      padding: clamp(35px, 6vw, 70px);
+      padding: 55px;
       text-align: center;
       border-radius: 6px;
     }
 
-    .contact-panel h2 {
-      margin-top: 15px;
+    .contact-panel .gold-line {
+      margin: 20px auto;
     }
 
     .contact-panel p {
       max-width: 650px;
-      margin: 15px auto 30px;
+      margin: 0 auto 25px;
     }
 
     .contact-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 25px;
+      gap: 15px;
+      margin-top: 25px;
     }
 
     .contact-links a {
+      display: inline-block;
+      border: 1px solid var(--border);
+      padding: 12px 20px;
+      border-radius: 5px;
       font-weight: 700;
-      border-bottom: 1px solid var(--gold);
-      padding-bottom: 4px;
     }
 
-    /* =========================================
+    .contact-links a:hover {
+      background: var(--gold);
+      color: #101a29;
+    }
+
+    /* ========================================
        11. FOOTER
-    ========================================= */
+    ======================================== */
 
     footer {
-      padding: 30px 0;
       border-top: 1px solid var(--border);
+      padding: 25px 0;
+      background: var(--surface);
     }
 
     .footer-inner {
@@ -591,69 +598,49 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      flex-wrap: wrap;
     }
 
-    footer p {
-      font-size: 0.83rem;
+    .footer-inner p {
+      font-size: 0.85rem;
     }
 
     .back-to-top {
+      font-size: 0.85rem;
       font-weight: 700;
     }
 
-    /* =========================================
-       12. ANIMATIONS
-    ========================================= */
+    /* ========================================
+       12. RESPONSIVE DESIGN
+    ======================================== */
 
-.reveal {
-    opacity: 1;
-    transform: none;
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: none;
-}
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* =========================================
-       13. RESPONSIVE DESIGN
-    ========================================= */
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .about-grid {
+    @media (max-width: 950px) {
+      .hero-grid {
         grid-template-columns: 1fr;
         gap: 35px;
       }
 
+      .hero-card {
+        max-width: 600px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
       .graduate-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .nav-links {
-        gap: 14px;
-      }
-
-      .nav-links a {
-        font-size: 0.8rem;
+        gap: 15px;
       }
     }
 
-    @media (max-width: 650px) {
-      .section {
-        padding: 65px 0;
-      }
-
+    @media (max-width: 760px) {
       .nav-inner {
         flex-wrap: wrap;
-        padding: 12px 0;
+        padding: 15px 0;
       }
 
       .menu-toggle {
@@ -662,20 +649,19 @@
 
       .nav-links {
         display: none;
-        flex-basis: 100%;
         flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 10px 0;
+        align-items: flex-start;
+        width: 100%;
+        padding: 15px 0 5px;
+        gap: 15px;
       }
 
       .nav-links.open {
         display: flex;
       }
 
-      .nav-links a {
-        padding: 11px 0;
-        font-size: 0.95rem;
+      .nav-actions {
+        margin-left: auto;
       }
 
       .hero {
@@ -683,25 +669,32 @@
       }
 
       .hero-grid {
-        padding: 70px 0;
+        padding: 75px 0;
       }
 
       .hero h1 {
-        font-size: 3.1rem;
+        font-size: clamp(2.7rem, 12vw, 4.5rem);
       }
 
-      .education-grid,
-      .graduate-grid {
+      .education-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-buttons .button {
-        width: 100%;
+      .graduate-grid {
+        grid-template-columns: 1fr;
       }
 
       .honors-card {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .contact-panel {
+        padding: 35px 22px;
       }
 
       .footer-inner {
@@ -710,19 +703,38 @@
       }
     }
 
+    @media (max-width: 420px) {
+      .brand {
+        font-size: 1.05rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-card {
+        padding: 25px;
+      }
+    }
+
+    /* Respect reduced-motion preferences. */
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
       }
 
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
+      *,
+      *::before,
+      *::after {
         transition-duration: 0.01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
       }
     }
   </style>
@@ -730,14 +742,30 @@
 
 <body>
 
-  <!-- =====================================
+  <!-- ========================================
        NAVIGATION
-  ====================================== -->
+  ========================================= -->
 
   <header class="navbar">
-    <nav class="container nav-inner" aria-label="Main navigation">
+    <div class="container nav-inner">
 
-      <a class="brand" href="#home">Cody Justin Müders.</a>
+      <a class="brand" href="#home">
+        Cody Justin Müders
+      </a>
+
+      <nav
+        class="nav-links"
+        id="nav-links"
+        aria-label="Main navigation">
+
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#honors">Honors</a>
+        <a href="#graduate">Graduate School</a>
+        <a href="#involvement">Involvement</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
 
       <div class="nav-actions">
 
@@ -759,110 +787,99 @@
         </button>
 
       </div>
-
-      <div class="nav-links" id="nav-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#honors">Honors</a>
-        <a href="#graduate">Graduate School</a>
-        <a href="#involvement">Involvement</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-    </nav>
+    </div>
   </header>
 
 
   <main>
 
-    <!-- =====================================
+    <!-- ========================================
          HERO
-    ====================================== -->
+    ========================================= -->
 
     <section class="hero" id="home">
 
       <div class="container hero-grid">
 
-        <div class="reveal">
+        <div>
 
           <div class="eyebrow">
-            Political Science · Law · Public Policy
+            Academic Portfolio
           </div>
 
           <h1>
             Cody Justin
-            <span>Müders.</span>
+            <span>Müders</span>
           </h1>
-
-          <div class="gold-line"></div>
 
           <p class="hero-description">
             Political Science, Law and Policy student at
             California State Polytechnic University, Humboldt,
-            with academic interests in international law,
-            legal institutions, and global governance.
-            Preparing for the next chapter of academic study
-            and professional development.
+            with an academic interest in international law,
+            legal institutions, and graduate study.
           </p>
 
           <div class="hero-buttons">
 
             <a href="#education" class="button button-primary">
-              Explore My Education →
+              Academic Background
             </a>
 
             <a href="#contact" class="button button-secondary">
-              Get in Touch ↗
+              Contact Me
             </a>
 
           </div>
 
           <p class="hero-note">
-            California State Polytechnic University, Humboldt
-            · Expected Graduation 2027
+            B.S. Political Science, Law and Policy · Expected 2027
           </p>
 
         </div>
 
 
-        <aside class="hero-card reveal">
+        <aside class="hero-card">
 
           <div class="hero-card-label">
-            Academic Profile
+            Academic Focus
           </div>
 
           <h2>
-            Law, policy, and the pursuit of justice.
+            Law, Policy & International Affairs
           </h2>
 
-          <ul class="research-list">
+          <p>
+            Building an academic foundation in political science
+            and legal studies while preparing for graduate
+            education in international law.
+          </p>
 
+          <ul class="research-list">
             <li>Political Science</li>
             <li>Law and Public Policy</li>
             <li>International Law</li>
-            <li>Legal Institutions</li>
-            <li>Global Governance</li>
-
+            <li>Graduate Education</li>
           </ul>
 
         </aside>
 
       </div>
-
     </section>
 
 
-    <!-- =====================================
+    <!-- ========================================
          ABOUT
-    ====================================== -->
+    ========================================= -->
 
     <section class="section" id="about">
 
       <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="section-heading">
 
-          <div class="eyebrow">Introduction</div>
+          <div class="eyebrow">
+            Introduction
+          </div>
 
           <h2>
             About Me
@@ -870,83 +887,81 @@
 
           <div class="gold-line"></div>
 
-          <p class="section-intro">
-            An academic journey centered on political institutions,
-            legal systems, and the principles that shape society.
-          </p>
-
         </div>
 
 
         <div class="about-grid">
 
-          <div class="about-copy reveal">
+          <div class="about-copy">
 
             <p>
-              I am Cody Justin Müders, an undergraduate student
-              pursuing a Bachelor of Science in Political Science,
-              Law and Policy at California State Polytechnic
-              University, Humboldt, with an anticipated graduation
-              in 2027.
+              I am an undergraduate student at California State
+              Polytechnic University, Humboldt, pursuing a Bachelor
+              of Science in Political Science, Law and Policy.
+              My academic interests center on the relationship
+              between political institutions, legal frameworks,
+              public policy, and international affairs.
             </p>
 
             <p>
-              My academic interests focus on the relationship
-              between law, political institutions, public policy,
-              and the broader international community.
-              I am particularly interested in understanding
-              how legal frameworks influence governance,
-              international relations, and the development
-              of public institutions.
+              My educational background also includes an
+              Associate of Arts in Criminal Justice from
+              Diablo Valley College. This foundation helped
+              develop my interest in legal systems and the
+              institutions responsible for interpreting and
+              applying the law.
             </p>
 
             <p>
-              Following my undergraduate studies, I look forward
-              to pursuing graduate education, with a particular
-              interest in International Law.
+              As I approach graduation in 2027, I am looking
+              forward to pursuing graduate education and
+              continuing my academic development in
+              international law.
             </p>
 
           </div>
 
 
-          <div class="principle reveal">
+          <aside class="principle">
 
             <div class="eyebrow">
-              Academic Philosophy
+              Academic Direction
             </div>
 
             <blockquote>
-              "Understanding the law is understanding
-              the foundations upon which societies operate."
+              Understanding law and policy requires examining
+              the institutions, principles, and relationships
+              that shape society.
             </blockquote>
 
             <p>
-              My approach emphasizes critical thinking,
-              analytical reasoning, intellectual curiosity,
-              and a commitment to understanding complex
-              political and legal systems.
+              My long-term academic interests include
+              international legal frameworks and the role
+              of law in an increasingly interconnected world.
             </p>
 
-          </div>
+          </aside>
 
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- =====================================
+    <!-- ========================================
          EDUCATION
-    ====================================== -->
+    ========================================= -->
 
-    <section class="section alternate-section" id="education">
+    <section
+      class="section alternate-section"
+      id="education">
 
       <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="section-heading">
 
-          <div class="eyebrow">Academic Background</div>
+          <div class="eyebrow">
+            Academic Background
+          </div>
 
           <h2>
             Education
@@ -955,8 +970,9 @@
           <div class="gold-line"></div>
 
           <p>
-            Building an academic foundation in political science,
-            law, policy, and criminal justice.
+            My academic experience reflects a continued
+            commitment to political science, criminal justice,
+            legal studies, and public policy.
           </p>
 
         </div>
@@ -964,10 +980,10 @@
 
         <div class="education-grid">
 
-          <article class="education-card reveal">
+          <article class="education-card">
 
             <div class="date">
-              Current Institution · Expected 2027
+              Expected Graduation: 2027
             </div>
 
             <h3>
@@ -980,18 +996,18 @@
             </p>
 
             <p>
-              Undergraduate studies focused on political
-              institutions, legal systems, public policy,
-              and the foundations of governance.
+              Undergraduate study focused on political
+              institutions, law, policy, and the broader
+              relationships between government and society.
             </p>
 
           </article>
 
 
-          <article class="education-card reveal">
+          <article class="education-card">
 
             <div class="date">
-              Previous Education
+              Associate Degree
             </div>
 
             <h3>
@@ -1003,66 +1019,65 @@
             </p>
 
             <p>
-              Academic foundation in criminal justice,
-              legal systems, and the institutions
-              responsible for administering justice.
+              Academic foundation in criminal justice
+              and the institutions, principles, and
+              processes associated with the legal system.
             </p>
 
           </article>
 
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- =====================================
-         ACADEMIC HONORS
-    ====================================== -->
+    <!-- ========================================
+         HONORS
+    ========================================= -->
 
     <section class="section" id="honors">
 
       <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="section-heading">
 
-          <div class="eyebrow">Academic Achievement</div>
+          <div class="eyebrow">
+            Academic Recognition
+          </div>
 
           <h2>
-            Honors & Recognition
+            Honors & Achievements
           </h2>
 
           <div class="gold-line"></div>
 
           <p>
-            Recognition of academic commitment and achievement
-            throughout my undergraduate education.
+            Recognition of academic performance and
+            continued commitment to undergraduate study.
           </p>
 
         </div>
 
 
-        <article class="honors-card reveal">
+        <article class="honors-card">
 
           <div class="honors-icon" aria-hidden="true">
-            ♛
+            ★
           </div>
 
           <div>
-
-            <div class="eyebrow">
-              Spring 2025
-            </div>
 
             <h3>
               Dean's Honor List
             </h3>
 
+            <p class="degree">
+              Spring 2025
+            </p>
+
             <p>
-              Recognized for academic achievement
-              at California State Polytechnic University,
-              Humboldt.
+              Recognized for academic achievement at
+              California State Polytechnic University, Humboldt.
             </p>
 
           </div>
@@ -1070,13 +1085,12 @@
         </article>
 
       </div>
-
     </section>
 
 
-    <!-- =====================================
+    <!-- ========================================
          GRADUATE SCHOOL
-    ====================================== -->
+    ========================================= -->
 
     <section
       class="section alternate-section"
@@ -1084,22 +1098,30 @@
 
       <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="section-heading">
 
-          <div class="eyebrow">Future Academic Pursuits</div>
+          <div class="eyebrow">
+            Future Academic Plans
+          </div>
 
           <h2>
-            Looking Ahead: Graduate School
+            Graduate School
           </h2>
 
           <div class="gold-line"></div>
 
-          <p class="graduate-intro">
-            Continuing my academic journey through graduate
-            education is an important next step. I am looking
-            forward to further developing my understanding
-            of international legal systems, international
-            institutions, and global governance.
+        </div>
+
+
+        <div class="graduate-intro">
+
+          <p>
+            Following my expected undergraduate graduation
+            in 2027, I look forward to continuing my education
+            through graduate study. My primary academic
+            interest is international law, particularly
+            the legal principles and institutions that
+            influence relationships between states.
           </p>
 
         </div>
@@ -1107,7 +1129,7 @@
 
         <div class="graduate-grid">
 
-          <article class="graduate-card reveal">
+          <article class="graduate-card">
 
             <span class="status">
               Provisional Acceptance
@@ -1118,13 +1140,13 @@
             </h3>
 
             <p>
-              Glasgow, Scotland
+              United Kingdom
             </p>
 
           </article>
 
 
-          <article class="graduate-card reveal">
+          <article class="graduate-card">
 
             <span class="status">
               Provisional Acceptance
@@ -1141,7 +1163,7 @@
           </article>
 
 
-          <article class="graduate-card reveal">
+          <article class="graduate-card">
 
             <span class="status">
               Provisional Acceptance
@@ -1160,57 +1182,55 @@
         </div>
 
 
-        <div class="graduate-interest reveal">
-
-          <div class="eyebrow">
-            Graduate School Interests
-          </div>
+        <div class="graduate-interest">
 
           <h3>
-            International Law
+            Graduate Academic Interest: International Law
           </h3>
 
           <p>
-            My intended graduate studies will focus on
-            International Law, including the legal frameworks,
-            institutions, and principles that govern relations
-            between states and shape the international community.
+            I intend to further explore international legal
+            systems, the development of international legal
+            principles, and the institutions that govern
+            relationships and obligations across national
+            boundaries.
           </p>
 
         </div>
 
       </div>
-
     </section>
 
 
-    <!-- =====================================
+    <!-- ========================================
          CAMPUS INVOLVEMENT
-    ====================================== -->
+    ========================================= -->
 
     <section class="section" id="involvement">
 
       <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="section-heading">
 
-          <div class="eyebrow">Campus & Community</div>
+          <div class="eyebrow">
+            Campus Engagement
+          </div>
 
           <h2>
-            Student Involvement
+            University Involvement
           </h2>
 
           <div class="gold-line"></div>
 
           <p>
-            Interdisciplinary engagement and participation
-            in the university community.
+            Participation in campus organizations and
+            interdisciplinary academic communities.
           </p>
 
         </div>
 
 
-        <article class="involvement-card reveal">
+        <article class="involvement-card">
 
           <div class="eyebrow">
             Student Organization
@@ -1221,33 +1241,32 @@
           </h3>
 
           <p>
-            Member of the Data Science Club at California State
-            Polytechnic University, Humboldt.
+            Member, California State Polytechnic University,
+            Humboldt.
           </p>
 
           <p style="margin-top: 15px;">
-            Participating in an interdisciplinary academic
-            community that encourages analytical thinking,
-            collaboration, and engagement with data-driven
-            approaches to understanding real-world issues.
+            Participating in an interdisciplinary student
+            organization focused on data science, analytical
+            thinking, and the application of data-driven
+            approaches across academic disciplines.
           </p>
 
         </article>
 
       </div>
-
     </section>
 
 
-    <!-- =====================================
+    <!-- ========================================
          CONTACT
-    ====================================== -->
+    ========================================= -->
 
     <section class="section" id="contact">
 
       <div class="container">
 
-        <div class="contact-panel reveal">
+        <div class="contact-panel">
 
           <div class="eyebrow">
             Contact & Professional Connections
@@ -1257,9 +1276,7 @@
             Let's Connect.
           </h2>
 
-          <div class="gold-line"
-               style="margin: 20px auto;">
-          </div>
+          <div class="gold-line"></div>
 
           <p>
             I welcome professional connections and conversations
@@ -1287,15 +1304,14 @@
         </div>
 
       </div>
-
     </section>
 
   </main>
 
 
-  <!-- =====================================
+  <!-- ========================================
        FOOTER
-  ====================================== -->
+  ========================================= -->
 
   <footer>
 
@@ -1316,9 +1332,9 @@
   </footer>
 
 
-  <!-- =====================================
+  <!-- ========================================
        JAVASCRIPT
-  ====================================== -->
+  ========================================= -->
 
   <script>
 
@@ -1336,6 +1352,7 @@
     const navLinks =
       document.getElementById("nav-links");
 
+
     menuToggle.addEventListener("click", () => {
 
       const isOpen =
@@ -1352,7 +1369,7 @@
     });
 
 
-    // Close mobile navigation after selection.
+    // Close mobile navigation after selecting a section.
 
     navLinks.querySelectorAll("a").forEach(link => {
 
@@ -1377,14 +1394,14 @@
     const themeToggle =
       document.getElementById("theme-toggle");
 
+
     themeToggle.addEventListener("click", () => {
 
-      const isLight =
-        document.documentElement.getAttribute("data-theme")
-        === "light";
+      const currentTheme =
+        document.documentElement.getAttribute("data-theme");
 
       const newTheme =
-        isLight ? "dark" : "light";
+        currentTheme === "light" ? "dark" : "light";
 
       document.documentElement.setAttribute(
         "data-theme",
@@ -1401,37 +1418,6 @@
           : "Switch to light theme"
       );
 
-    });
-
-
-    // Scroll reveal animations.
-
-    const revealElements =
-      document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-
-        entries.forEach(entry => {
-
-          if (entry.isIntersecting) {
-
-            entry.target.classList.add("visible");
-
-            observer.unobserve(entry.target);
-
-          }
-
-        });
-
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-    revealElements.forEach(element => {
-      observer.observe(element);
     });
 
   </script>
